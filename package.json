@@ -1,0 +1,45 @@
+{
+  "name": "bajwa_hugo",
+  "version": "1.0.0",
+  "description": "this is hugo site",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "mocha test",
+    "dev": "lite-server",
+    "db": "json-server --watch db.json --port 3005",
+    "start": "npm run build-js",
+    "build-js": "mkdirp dist/js && uglifyjs src/js/*.js -m -o dist/js/app.js",
+    "lint": "jshint src/**.js",
+    "sass": "node-sass --include-path scss scss/main.scss assets/main.css",
+    "pretest": "npm run lint",
+    "bash": "Location of the Bash/Shell script file"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ghaffarbajwa9/bajwa_hugo.git"
+  },
+  "author": "Abdul Ghaffar Bajwa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ghaffarbajwa9/bajwa_hugo/issues"
+  },
+  "homepage": "https://github.com/ghaffarbajwa9/bajwa_hugo#readme",
+  "keywords": [],
+  "devDependencies": {
+    "concurrently": "^4.1.0",
+    "jshint": "^2.10.1",
+    "lite-server": "^2.4.0",
+    "mocha": "^6.0.2",
+    "node-sass": "^4.11.0",
+    "npm-run-all": "^4.1.5",
+    "onchange": "^5.2.0",
+    "uglify-js": "^3.4.9"
+  },
+  "dependencies": {
+    "mkdir": "0.0.2",
+    "mkdirp": "^0.5.1"
+  }
+}
