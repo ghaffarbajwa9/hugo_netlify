@@ -1,8 +1,10 @@
 backend:
   name: github
-  repo: https://github.com/ghaffarbajwa9/hugo_site
+  repo: https://github.com/ghaffarbajwa9/hugo_netlify
   branch: master
-  site_domain: https://vibrant-shirley-d782ee.netlify.com/
+  site_domain: https://netlify-hugo.netlify.com/
+
+publish_mode: editorial_workflow
 
 media_folder: static/img
 public_folder: static/img
